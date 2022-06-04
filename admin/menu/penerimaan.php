@@ -131,10 +131,10 @@
 								if($data['status']=="1"){
 									?>
 									<div class="controls">
-										<input type="radio" id="basicinput" name="status" value="1" checked> Aktif
+										<input type="radio" id="basicinput" name="status" value="1" checked required> Aktif
 									</div>
 									<div class="controls">
-										<input type="radio" id="basicinput" name="status" value="0"> Tidak Aktif
+										<input type="radio" id="basicinput" name="status" value="0" required> Tidak Aktif
 									</div>
 									<?php
 								}else if($data['status']=="0"){
@@ -228,14 +228,14 @@
 							<label class="control-label" for="basicinput">Kriteria</label>
 							<div class="controls">
 								<input type="hidden" name="id_penerimaan" <?php echo "value='$id_lowongan'"; ?>>
-								<input type="text" id="basicinput" name="kriteria" placeholder="Input nama kriteria" class="span8">
+								<input type="text" id="basicinput" name="kriteria" placeholder="Input nama kriteria" class="span8" required>
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label class="control-label" for="basicinput">Bobot</label>
 							<div class="controls">
-								<input type="text" id="basicinput" name="bobot" placeholder="Input bobot kriteria" class="span8">
+								<input type="text" id="basicinput" name="bobot" placeholder="Input bobot kriteria" class="span8" required>
 							</div>
 						</div>
 
