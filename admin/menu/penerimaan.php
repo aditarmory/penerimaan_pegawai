@@ -228,14 +228,13 @@
 							<label class="control-label" for="basicinput">Kriteria</label>
 							<div class="controls">
 								<input type="hidden" name="id_penerimaan" <?php echo "value='$id_lowongan'"; ?>>
-								<input type="text" id="basicinput" name="kriteria" placeholder="Input nama kriteria" class="span8" required>
+								<input type="text" id="basicinput" name="kriteria" placeholder="Input nama kriteria" class="span8" required oninvalid="this.setCustomValidity('Kriteria harus diisi')" oninput="setCustomValidity('')">
 							</div>
 						</div>
-
 						<div class="control-group">
 							<label class="control-label" for="basicinput">Bobot</label>
 							<div class="controls">
-								<input type="text" id="basicinput" name="bobot" placeholder="Input bobot kriteria" class="span8" required>
+								<input type="number" id="basicinput" name="bobot" placeholder="Input bobot kriteria" class="span8" required oninvalid="this.setCustomValidity('Nilai bobot harus diisi')" oninput="setCustomValidity('')">
 							</div>
 						</div>
 
