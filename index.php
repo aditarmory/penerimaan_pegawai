@@ -15,115 +15,63 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- css -->
+	<link href="dist/output.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
 	<link href="color/default.css" rel="stylesheet" media="screen">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 	<script src="js/modernizr.custom.js"></script>
 	</head>
+	<style>
+		html {
+  			scroll-behavior: smooth;
+		}
+	</style>
   <body>
-	<div class="menu-area">
-			<div id="dl-menu" class="dl-menuwrapper">
-						<button class="dl-trigger">Open Menu</button>
-						<ul class="dl-menu">
-							<li>
-								<a href="#intro">Home</a>
-							</li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#penerimaan">Penerimaan</a></li>
-							<li><a href="#galeri">Galeri</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div><!-- /dl-menuwrapper -->
-	</div>	
+	
+	<!-- Navbar Section Brader!!! -->
 
-	  <!-- intro area -->	  
-	  <div id="intro">
-	  
-			<div class="intro-text">
-				<div class="container">
-					<div class="row">
-					
-						
-					<div class="col-md-12">
-			
-						<div class="brand">
-							<img src='img/uui.png'>
-							<h1><a href="index.html">Lowongan Kerja<br></a></h1>
-							
-							<p><span>Bergabung bersama kami untuk mendapatkan karir yang lebih baik</span></p>
-							<?php
-								if(isset($_SESSION['user'])){
-							?>
-								<button type="button" class="btn btn-success btn-lg">My Profile</button>
-							<?php
-								}else{
-							?>
-							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalRegister">Register</button>
-							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalLogin">Login</button>
-							<?php
-								}
-							?>
-						</div>
-					</div>
-					</div>
-				</div>
-		 	</div>
-			
-	 </div>
-	  
+	<div class="w-full h-28 bg-white flex justify-around items-center border-b-2 border-gray-300">
+		<a href=#about><img src="./img/go.png" alt="go" class="object-cover h-16 hover:cursor-pointer"/></a>
+		<div>
+			<a href="#about" class="mr-8 font-poppins text-black hover:text-[#DC3545] hover:no-underline">Tentang Kami</a>
+			<a href="#penerimaan" class="font-poppins text-black hover:text-[#DC3545] hover:no-underline">Penerimaan Pegawai</a>
+		</div>
+		<p class="font-poppins mt-3"><a class="text-[#DC3545] hover:text-black hover:no-underline" href="https://www.instagram.com/officialganeshaoperation/" target=_blank>Official Website</a></p>
+	</div>
 
+	<!-- End Navbar Section Brader!!! -->
+
+	  <!-- intro area Brader!!!-->	  
+	  <div class="flex flex-col justify-center mt-80">
+	  	<p class="text-7xl mb-6 font-poppins">Lowongan Pekerjaan</p>
+		<p class="text-7xl font-poppins font-semibold text-[#DC3545]">Ganesha Operation Balikpapan</p>
+		<p class="text-3xl text-gray-400 font-poppins mt-6">Bersama Ganesha Operation membangun bangsa yang lebih baik</p>
+	 	<div class="flex justify-center mt-36">
+			<button type="button" class="px-10 py-4 mr-8 text-[#DC3545] text-3xl font-poppins font-bold border-2 border-[#DC3545] rounded-md hover:bg-[#DC3545] hover:text-white" data-toggle="modal" data-target="#myModalRegister">Register</button>
+			<button type="button" class="px-10 py-4 text-3xl font-poppins font-bold border-2 border-[#DC3545] rounded-md bg-[#DC3545] text-white hover:text-[#DC3545] hover:bg-white hover:border-[#DC3545]" data-toggle="modal" data-target="#myModalLogin">Login</button>
+	 	</div>
+	</div>
+	<!-- end intro area Brader!!!-->	  
 	  
 	  
 	  <!-- About -->
-	  <section id="about" class="home-section bg-white">
-		<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
-					<div class="section-heading">
-					 <h2>About us</h2>
-					 <p> Kami telah berdiri sejak tahun 2016 dan sekarang kepingin duduk</p>
-					</div>
-				  </div>
-			  </div>
-			  <div class="row">
-                <div class="col-md-offset-2 col-md-8">
-					<div class="box-team wow bounceInDown" data-wow-delay="0.1s">
-                    <img src="img/team/1.jpg"/>
-                    <h4>Rawatech</h4>
-                    <p>CEO (Cayang Emak Olways)</p>
-					</div>
-                </div>
-			  </div>			  
-		  </div>	  
+	  <section id="about">
+		  <div class="w-full h-full bg-[#FBF5F6] flex justify-between md:container md:mx-auto mt-36 py-24">
+			<div class="flex flex-col pl-40 w-3/5 justify-center">
+				<p class=" text-5xl text-[#DC3545] font-poppins font-bold text-left">Tentang Ganesha Operation</p>
+				<p class="font-poppins text-2xl leading-relaxed text-left pr-40 mt-6">Bimbel Ganesha Operation merupakan lembaga bimbingan belajar terbaik dan terbesar di Indonesia. Berdiri sejak 2 Mei 1984 di Kota Bandung, saat ini Ganesha Operation telah tersebar di 265 kota di Indonesia, mulai dari Aceh hingga Ambon.</p>
+			</div>
+			<div class="flex flex-col pr-40">
+			<a href=#about><img src="./img/selamat.png" alt="selamat" class="object-cover h-42"/></a>
+			</div>
+		  </div>
 	  </section>
+		 
 	  
-		<!-- spacer -->	  
-		<section id="spacer1" class="home-section spacer">	
-           <div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="color-light">
-						<h2 class="wow bounceInDown" data-wow-delay="1s">Partnership, Leadership, Battleship, Pokoknyaship</h2>
-						<p class="lead wow bounceInUp" data-wow-delay="2s">Merdeka atau Mati</p>
-						<?php
-							if(isset($_SESSION['user'])){
-						?>
-							<button type="button" class="btn btn-success btn-lg lead wow bounceInUp" data-wow-delay="1s">My Profile</button>
-						<?php
-							}else{
-						?>
-						<button type="button" class="btn btn-primary btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
-						<button type="button" class="btn btn-info btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
-						<?php
-							}
-						?>
-						</div>
-					</div>				
-				</div>
-            </div>
-		</section>	  
-	  
-	  <!-- Services -->
+	  <!-- Table Penerimaan Pegawai -->
 	 <section id="penerimaan" class="home-section bg-white">
 		<div class="container">
 			  <div class="row">
@@ -161,259 +109,9 @@
 			  </div>	
 		</div>
 	</section>
-	
-	 <!-- Works -->
-	<section id="galeri" class="home-section bg-gray">
-			<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
-					<div class="section-heading">
-					 <h2>Galeri</h2>
-					 <p>Kumpulan foto-foto kegiatan yang ada </p>
-					</div>
-				  </div>
-			  </div>
-				<div class="row">
-					<div class="col-md-offset-2 col-md-8">
-					
-					<ul class="lb-album">
-						<li>
-							<a href="#image-1">
-								<img src="img/works/thumbs/1.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-1">
-								<a href="#page" class="lb-close">X</a>
-								<img src="img/works/1.jpg" alt="" />
-								<div>
-									<h3>Galeri</h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-2">
-								<img src="img/works/thumbs/2.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-2">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/2.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-3">
-								<img src="img/works/thumbs/3.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-3">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/3.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-4">
-								<img src="img/works/thumbs/4.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-4">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/4.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						
-						<li>
-							<a href="#image-5">
-								<img src="img/works/thumbs/5.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-5">
-								<a href="#page" class="lb-close">X</a>
-								<img src="img/works/5.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-6">
-								<img src="img/works/thumbs/6.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-6">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/6.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-7">
-								<img src="img/works/thumbs/7.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-7">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/7.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-						<li>
-							<a href="#image-8">
-								<img src="img/works/thumbs/8.jpg" alt="">
-								<span>+</span>
-							</a>
-							<div class="lb-overlay" id="image-8">
-								<a href="#page" class="lb-close">x Close</a>
-								<img src="img/works/8.jpg" alt="" />
-								<div>
-									<h3>Galeri </h3>
-									<p>Galeri kegiatan </p>
-								</div>
-								
-							</div>
-						</li>
-					</ul>
-					
-					</div>
-				</div>
-			</div>
-		</section>	  
-	
-		<!-- spacer 2 -->	  
-		<section id="spacer2" class="home-section spacer">	
-           <div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="color-light">
-						<h2 class="wow bounceInDown" data-wow-delay="1s">World Class Cyber Company</h2>
-						<p class="lead wow bounceInUp" data-wow-delay="2s">Come Join to Our Team</p>
-						<?php
-							if(isset($_SESSION['user'])){
-						?>
-							<button type="button" class="btn btn-success btn-lg lead wow bounceInUp" data-wow-delay="1s">My Profile</button>
-						<?php
-							}else{
-						?>
-						<button type="button" class="btn btn-primary btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
-						<button type="button" class="btn btn-info btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
-						<?php
-							}
-						?>
-						</div>
-					</div>				
-				</div>
-            </div>
-		</section>	
 	  
-	 <!-- Contact -->
-	  <section id="contact" class="home-section bg-white">
-	  	<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
-					<div class="section-heading">
-					 <h2>Hubungi Kami</h2>
-					 <p>Contact via form below and we will be get in touch with you within 24 hours. </p>
-					</div>
-				  </div>
-			  </div>
-
-	  		<div class="row">
-	  			<div class="col-md-offset-1 col-md-10">
-
-				<form class="form-horizontal" role="form">
-				  <div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
-					  <input type="text" class="form-control" id="inputName" placeholder="Name">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
-					  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
-					  <input type="text" class="form-control" id="inputSubject" placeholder="Subject">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
-					  <textarea name="message" class="form-control" rows="3" placeholder="Message"></textarea>
-					</div>
-				  </div>
-				  <div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
-					 <button type="button" class="btn btn-theme btn-lg btn-block">Send message</button>
-					</div>
-				  </div>
-				</form>
-	
-	  			</div>
-			
-				
-	  		</div>
-			<div class="row mar-top30 ">
-				<div class="col-md-offset-2 col-md-8">
-					<h5>We're on social networks</h5>
-					<ul class="social-network">
-						<li><a href="#">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-						</span></a>
-						</li>
-						<li><a href="#">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
-						</span></a>
-						</li>
-						<li><a href="#">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-						</span></a>
-						</li>
-						<li><a href="#">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-						</span></a>
-						</li>
-					</ul>
-				</div>				
-			</div>
-
-	  	</div>
-	  </section>  
-
-<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<!-- Modal -->
+	<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -484,19 +182,17 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstrap Themes</a></p>
+<!-- Section Footer Brader!! -->
+	<footer  class="bg-white">
+			<div class="flex justify-between mx-40">
+				<div class="text-[#DC3545]">
+					<p class="font-poppins">Ganesha Operation © 2022</p>
 				</div>
-                <!-- 
-                    All links in the footer should remain intact. 
-                    Licenseing information is available at: http://bootstraptaste.com/license/
-                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Mamba
-                -->
-			</div>		
-		</div>	
+				<div class="flex">
+				<img src="./img/apple.png" alt="apple" class="object-cover h-18 rounded-md mr-8"/>
+				<img src="./img/andro.png" alt="andro" class="object-cover h-18 rounded-md"/>
+				</div>
+			</div>
 	</footer>
 	 
 	 <!-- js -->
